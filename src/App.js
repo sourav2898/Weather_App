@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React,{useState, useEffect} from 'react';
+import React,{useState} from 'react';
 import API_KEY from './api';
 import Input from './Input';
 import Display from './Display';
@@ -27,9 +27,7 @@ function App() {
       setTemp(data.main.temp);
     })
     .catch(err => setError(err));
-
     // console.log("data",data);
-    
     setCity("");
   }
 
