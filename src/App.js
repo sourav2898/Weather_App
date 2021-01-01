@@ -8,10 +8,10 @@ function App() {
 
   const [city,setCity] = useState("");
   // const [data,setData] = useState({});
-  const [location,setLocation] = useState("");
-  const [lat,setLat] = useState("");
-  const [long,setLong] = useState("");
-  const [temp,setTemp] = useState("");
+  const [location,setLocation] = useState("NA");
+  const [lat,setLat] = useState("NA");
+  const [long,setLong] = useState("NA");
+  const [temp,setTemp] = useState("0");
   const [err,setError] = useState("");
 
   const API = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
