@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #666;
+}
+
+input{
+  width: 80%;
+  font-size: 20px;
+  outline: none;
+}
+
+button{
+  font-size: 20px;
+  padding: 5px;
+  outline: none;
+}
+
+.description{
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #666;
+  text-align: center;
+  color: #fff;
+}
+
+h1,h2{
+  margin: 10px;
+  padding: 10px;
+}
