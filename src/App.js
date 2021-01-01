@@ -7,7 +7,7 @@ import Display from './Display';
 function App() {
 
   const [city,setCity] = useState("");
-  const [data,setData] = useState({});
+  // const [data,setData] = useState({});
   const [location,setLocation] = useState("");
   const [lat,setLat] = useState("");
   const [long,setLong] = useState("");
@@ -16,19 +16,16 @@ function App() {
 
   const API = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
 
-  function get(){
-    axios.get(API)
-    .then( (res) => {
-      // console.log("res",res);
-      setData(res.data)
-      setLocation(city);
-      setLat(data.coord.lat);
-      setLong(data.coord.lon);
-      setTemp(data.main.temp);
-    })
-    .catch(err => setError(err));
-    // console.log("data",data);
-    setCity("");
+  async function get(){
+    const res = await axios.get(API);
+      // setData(res.data);
+      console.log("res",res);
+      // console.log("data",data);
+      setLocation(res.data.name);
+      setLat(res.data.coord.lat);
+      setLong(res.data.coord.lon);
+      setTemp(res.data.main.temp);
+      setCity("");
   }
 
   return (
